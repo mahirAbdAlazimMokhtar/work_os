@@ -17,7 +17,8 @@ class _LoginScreenState extends State<LoginScreen>
     super.dispose();
   }
 
-  //this run when the app run@override
+  //this run when the app run
+  @override
   void initState() {
    _animationController = AnimationController(vsync: this,duration: const Duration(seconds: 20));
    _animation = CurvedAnimation(parent: _animationController, curve: Curves.linear)..addListener(() {setState(() {
