@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:work_os/constans/const.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -21,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen>
   @override
   void initState() {
    _animationController = AnimationController(vsync: this,duration: const Duration(seconds: 20));
-   _animation = CurvedAnimation(parent: _animationController, curve: Curves.linear)..addListener(() {setState(() {
+   _animation = CurvedAnimation(parent: _animationController, curve: Curves.easeInBack)..addListener(() {setState(() {
    });})..addStatusListener((animationStatus) {
      if(animationStatus == AnimationStatus.completed){
        _animationController.reset();
@@ -34,6 +36,21 @@ class _LoginScreenState extends State<LoginScreen>
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Stack(
+        children: [
+          CachedNetworkImage(
+            imageUrl: imageLogin,fit: BoxFit.cover,
+            errorWidget: (context, url, error) =>const Icon(Icons.error) ,
+            alignment: FractionalOffset(_animation.value,0),
+            width: double.infinity,
+            height: double.infinity,
+            placeholder: (context, url) => Image.asset('assets/images/on_error.jpeg',fit: BoxFit.fill,),
+
+
+          )
+        ],
+      ),
+    );
   }
 }
