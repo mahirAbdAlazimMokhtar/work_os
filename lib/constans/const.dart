@@ -1,1 +1,1 @@
-const String imageLogin = 'https://images.unsplash.com/photo-1590496116981-3479a2d6f120?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE5fHxvZmZpY2V8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60';
+const String imageLogin = 'https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60';
